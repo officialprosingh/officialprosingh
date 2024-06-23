@@ -1,3 +1,1 @@
-- 👋 Hi, I’m @officialprosingh
-- 👀 I’m interested in Developing Ideas which can change our world.
-- 📫 How to reach me, Inst, FB, Twitter  - @realprosingh
+👋 Hi, I’m Parwinder 
