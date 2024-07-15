@@ -1,39 +1,17 @@
-name: WakaTime Readme Stats
+name: Waka Readme
 
 on:
+  # for manual workflow trigger
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Runs every day at midnight UTC
-  push:
-    branches:
-      - main
+    # runs at 12 AM UTC (5:30 AM IST)
+    - cron: "0 0 * * *"
 
 jobs:
   update-readme:
+    name: WakaReadme DevMetrics
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Setup Python
-        uses: actions/setup-python@v2
+      - uses: athul/waka-readme@master # this action name
         with:
-          python-version: '3.x'
-
-      - name: Install waka-readme-stats
-        run: |
-          pip install waka-readme-stats
-
-      - name: Generate WakaTime stats
-        env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-        run: |
-          waka-readme-stats --user your-wakatime-username
-
-      - name: Commit WakaTime stats
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          git commit -m 'Update WakaTime stats' || echo "No changes to commit"
-          git push
