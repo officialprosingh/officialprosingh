@@ -3,6 +3,13 @@
 ### WakaTime Stats
 
 <!--START_SECTION:waka-->
+
+```txt
+JavaScript   2 hrs 5 mins    ███████████████████████▒░   93.61 %
+Python       5 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   04.08 %
+HTML         3 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.31 %
+```
+
 <!--END_SECTION:waka-->
 
 ## Top Languages
